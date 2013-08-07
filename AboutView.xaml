@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="ReadFit.AboutView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:fm="clr-namespace:ReadFit.FileModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1000" >
+    <Grid>
+
+        <!--SettingBinding binds to Properties.Settings values see FileModel for details-->
+        <CheckBox
+            IsChecked="{fm:SettingBinding IsMetric}"
+            Content="Metric Units"
+            Height="16"
+            HorizontalAlignment="Left"
+            Margin="10,0,0,90"
+            Name="checkBox1"
+            VerticalAlignment="Bottom"
+            Width="96" />
+
+        <TextBlock
+            Height="23"
+            HorizontalAlignment="Right"
+            Margin="0,0,10,10"
+            Name="aboutText"
+            Text="ReadFit - Copyright 2013"
+            VerticalAlignment="Bottom"
+            Width="163" />
+        
+        <TextBlock
+            Height="23"
+            HorizontalAlignment="Left"
+            Margin="10,0,0,10"
+            Name="textBlock1"
+            FontWeight="Bold"
+            FontSize="16"
+            Text="{Binding Name}"
+            VerticalAlignment="Bottom"
+            Width="96" />
+        
+    </Grid>
+    
+</UserControl>
